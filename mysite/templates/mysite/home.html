@@ -1,0 +1,117 @@
+{% load static %}
+{%load poll_extras%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kala Threads</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}">
+    <style type="text/css">
+    body{
+        background-color: #e9cbb7;
+    }
+    #firstd{
+        background-color: black;
+        width: 100%;
+        height: 45px;
+        position: relative;
+    }
+    #sed{
+        background-color: yellow;
+        width: 100%;
+        height: 480px;
+        position: relative;
+        padding-left: 0px;
+        padding-right: 0px;
+        background-image: url("{% static 'images/img.jpg'%}");
+        background-size: cover;
+    }
+    #yz{
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 14px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif
+    }
+    #kt:link,#kt:visited{
+        color: black;
+        font-size: 25px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif
+    }
+    #kt:hover,#kt:active{
+        color: black;
+        text-decoration: none;
+    }
+    .navbar-nav.navbar-center {
+        position: absolute;
+        left: 50%;
+        transform: translatex(-50%);
+    }
+    a{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    #borb{
+        font-size: 13px;
+        font-weight: 540;
+    }
+    #borb:hover{
+        border-bottom-style: solid;
+        border-bottom-color: black;
+        border-bottom-width: thin;
+    }
+    #f{
+        margin-bottom: 0px;
+    }
+    .imag{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    </style>
+</head>
+<body>
+<div class="container-fluid" id='firstd'>
+<strong id='yz'>This is text</strong>
+</div>
+<nav id="f" class="navbar navbar-default" style="background-color: white;" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-left">
+            <li><a id="borb" href="#">Left</a></li>
+            <li><a id="borb" href="#">center</a></li>
+            <li><a id="borb" href="#">right</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-center">
+            <li><a id="kt" href="#">KALA THREADS</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a id="borb" href="#">Right</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" id='sed'>
+    <!-- <img class="img-responsive imag" src="{% static 'images/img.jpg'%}"alt="my image"> -->
+</div>
+<!-- <div class="container-fluid" id="ht">
+    
+    text
+</div> -->
+</body>
+</html>
