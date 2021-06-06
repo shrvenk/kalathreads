@@ -88,7 +88,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 14px;
+        font-size: 12px;
         font-family: Verdana, Geneva, Tahoma, sans-serif
     }
     #kt:link,#kt:visited{
@@ -134,11 +134,38 @@
     .ps{
         position: relative;
     }
+    .acc{
+        width: 200px;
+        height: 300px;
+        padding-top: 30px;
+    }
+    .cat{
+        margin-left: 22px;
+        color: black;
+        font-size: 15px;
+    }
+    .pd:link,.pd:visited{
+        color: gray;
+        margin-left: 22px;
+        font-size: 13px;
+        font-weight:500;
+    }
+    .pd:active,.pd:hover
+    {
+        color: black;
+        margin-left: 22px;
+        font-size: 13px;
+        text-decoration: none;
+    }
+    .mar{
+        margin-bottom: 10px;
+    }
+    
     </style>
 </head>
 <body>
 <div class="container-fluid" id='firstd'>
-<strong id='yz'>This is text</strong>
+<strong id='yz'>20% Discount for first user</strong>
 </div>
 <nav id="f" class="navbar navbar-default" style="background-color: white;" role="navigation">
     <div class="navbar-header ps enable">
@@ -151,15 +178,35 @@
     </div>
     <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-left">
-            <li><a id="borb" href="#">Left</a></li>
-            <li><a id="borb" href="#">center</a></li>
-            <li><a id="borb" href="#">right</a></li>
+            <li class="dropdown"><a id="borb" href="#" class="dropdown-toggle" data-toggle="dropdown">Sarees</a>
+            <ul class="dropdown-menu acc">
+                <div class="mar"><small class='cat'>Categories<br></small></div>
+                <div class="mar"><a class="pd" href="#">Plain Mul Contrast</a></div>
+                <div class="mar"><a class="pd" href="#">Ombre Mul</a></div>
+                <div class="mar"><a class="pd" href="#">Half & Half Mul</a></div>
+                <div class="mar"><a class="pd" href="#">Shibori Mul</a></div>
+                <div class="mar"><a class="pd" href="#">Bandhani Mul</a></div>
+                <div class="mar"><a class="pd" href="#">Others</a></div>
+            </ul>
+            </li>
+            <li><a id="borb" href="#">Kurtis</a></li>
+            <li><a id="borb" href="#">Dupattas</a></li>
+            <li><a id="borb" href="#" class="dropdown-toggle" data-toggle="dropdown">Others</a>
+                <ul class="dropdown-menu acc">
+                    <div class="mar"><small class='cat'>Categories<br></small></div>
+                    <div class="mar"><a class="pd" href="#">Accessories</a></div>
+                    <div class="mar"><a class="pd" href="#">Jewellery</a></div>
+                    <div class="mar"><a class="pd" href="#">Earrings</a></div>
+                    <div class="mar"><a class="pd" href="#">Necklace</a></div>
+                    <div class="mar"><a class="pd" href="#">Bracelets</a></div>
+                </ul>
+            </li>
         </ul>
         <ul class="nav navbar-nav navbar-center disable">
             <li><a id="kt" href="#">KALA THREADS</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a id="borb" href="#">Right</a></li>
+            <li><a id="borb" href="#">Contact us</a></li>
         </ul>
     </div>
 </nav>
