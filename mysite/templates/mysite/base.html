@@ -1,0 +1,301 @@
+{% load static %}
+{%load poll_extras%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kala Threads</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}">
+    <style type="text/css">
+    body{
+        background-color: #e9cbb7;
+    }
+    #firstd{
+        background-color: black;
+        width: 100%;
+        height: 45px;
+        position: relative;
+    }
+    #sed{
+        width: 100%;
+        height: 520px;
+        position: relative;
+        padding-left: 0px;
+        padding-right: 0px;
+        background-image: url("{% static 'images/img.jpg'%}");
+        background-size: cover;
+    }
+    @media (max-width: 641px)
+    {
+        .disable
+        {
+            display: none;
+        }
+        .dp1{
+            font-size: 45px;
+        }
+        .dp2,.dp3{
+            font-size: 15px;
+        }
+        .blnk{
+            padding-left: 15px;
+        }
+    }
+    @media (min-width: 641px)
+    {
+        .enable
+        {
+            display: none;
+        }
+        .dp1{
+            font-size: 78px;
+        }
+        .dp2,.dp3{
+            font-size: 22px;
+        }
+        .blnk{
+            padding-left: 70px;
+        }
+    }
+    pre {border: 0; background-color: transparent;}
+    .dp{
+        color: white;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        font-family: Arial, Helvetica, sans-serif;
+        margin:auto
+    }
+    .dp1{
+        top: 35%;
+        left: 50%;
+        /* font-size: 78px; */
+    }
+    .dp2{
+        top: 55%;
+        left: 50%;
+        /* font-size: 22px; */
+        font-weight: 500;
+    }
+    .dp3{
+        top: 60%;
+        left: 50%;
+        /* font-size: 22px; */
+        font-weight: 500;
+    }
+    .dp4{
+        color: rgb(95, 93, 93);
+        top: 75%;
+        left: 50%;
+        padding-left: 55px;
+        padding-right: 55px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-weight: bold;
+    }
+    #yz{
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 12px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif
+    }
+    #kt:link,#kt:visited{
+        color: black;
+        font-size: 25px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif
+    }
+    #kt:hover,#kt:active{
+        color: black;
+        text-decoration: none;
+    }
+    .navbar-nav.navbar-center {
+        position: absolute;
+        left: 50%;
+        transform: translatex(-50%);
+    }
+    a{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    #borb{
+        font-size: 13px;
+        font-weight: 540;
+    }
+    #borb:hover{
+        border-bottom-style: solid;
+        border-bottom-color: black;
+        border-bottom-width: thin;
+    }
+    #f{
+        margin-bottom: 0px;
+    }
+    .imag{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .kt2{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .ps{
+        position: relative;
+    }
+    .acc{
+        /* width: 200px;
+        height: 300px; */
+        padding-top: 30px;
+    }
+    .cat{
+        margin-left: 22px;
+        color: black;
+        font-size: 15px;
+    }
+    .pd:link,.pd:visited{
+        color: gray;
+        margin-left: 22px;
+        font-size: 13px;
+        font-weight:500;
+    }
+    .pd:active,.pd:hover
+    {
+        color: black;
+        margin-left: 22px;
+        font-size: 13px;
+        text-decoration: none;
+    }
+    .mar{
+        margin-bottom: 10px;
+    }
+    .mar2{
+        margin-bottom: 7px;
+    }
+    .tst{
+        margin-top: 100px;
+    }
+    .imag{
+    height: 100%;
+    width: 100%;
+    }
+    .inbox1{
+        background-color: black;
+        height: 500px;
+        background-size: cover;
+    }
+    .blnk{
+        background-color: whitesmoke;
+        height: 150px;
+        margin-top: 100px;
+        padding-top: 30px;
+    }
+    .at{
+        margin-left: 20px;
+        font-size: 14px;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+    .nw{
+        color: grey;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .fa {
+    padding-top: 4px;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    margin-left: 10px;
+    }
+    .fa:hover {
+    opacity: 0.7;
+    }
+    .fa-linkedin {
+    background: #007bb5;
+    color: white;
+    }
+    .fa-instagram {
+    background: #125688;
+    color: white;
+    }
+    .fa-facebook {
+    background: #3B5998;
+    color: white;
+    }
+    </style>
+{%block stl%}
+{%endblock%}
+</head>
+<body>
+<div class="container-fluid" id='firstd'>
+<strong id='yz'>20% Discount for first user</strong>
+</div>
+<nav id="f" class="navbar navbar-default" style="background-color: white;" role="navigation">
+    <div class="navbar-header ps enable">
+        <a id="kt" class="kt2" href="#">KALA THREADS</a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-left">
+            <li class="dropdown"><a id="borb" href="#" class="dropdown-toggle" data-toggle="dropdown">Sarees</a>
+            <ul class="dropdown-menu acc">
+                <div class="mar"><small class='cat'>Categories<br></small></div>
+                <div class="mar"><a class="pd" href="#">Plain Mul Contrast</a></div>
+                <div class="mar"><a class="pd" href="#">Ombre Mul</a></div>
+                <div class="mar"><a class="pd" href="#">Half & Half Mul</a></div>
+                <div class="mar"><a class="pd" href="#">Shibori Mul</a></div>
+                <div class="mar"><a class="pd" href="#">Bandhani Mul</a></div>
+                <div class="mar"><a class="pd" href="#">Others</a></div>
+            </ul>
+            </li>
+            <li><a id="borb" href="#">Kurtis</a></li>
+            <li><a id="borb" href="#">Dupattas</a></li>
+            <li><a id="borb" href="#" class="dropdown-toggle" data-toggle="dropdown">Others</a>
+                <ul class="dropdown-menu acc">
+                    <div class="mar"><small class='cat'>Categories<br></small></div>
+                    <div class="mar"><a class="pd" href="#">Accessories</a></div>
+                    <div class="mar"><a class="pd" href="#">Jewellery</a></div>
+                </ul>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-center disable">
+            <li><a id="kt" href="{%url 'home'%}">KALA THREADS</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a id="borb" href="{%url 'contact'%}">Contact us</a></li>
+        </ul>
+    </div>
+</nav>
+{% block home %}
+
+{% endblock %}
+<div class='row blnk'>
+    <div class='mar2'><small class='at'>Contact No : <small class='nw'>+915487526378</small><br></small></div>
+    <div class='mar2'><small class='at'>Email Id : <small class='nw'>45*******@gmail.com</small><br></small></div>
+    <div class='mar2'><small class='at'>Address : <small class='nw'>**********</small><br></small></div>
+    <div class='mar2'><small class='at'>Follow us : 
+        <a href="https://www.linkedin.com/in/venkatesh-kamtham-377140155/" class="fa fa-linkedin"></a>
+        <a href="https://www.instagram.com/shrvenk123/" class="fa fa-instagram"></a>
+        <a href="https://www.facebook.com/venkatesh.kamtham.3/" class="fa fa-facebook"></a>
+    </small></div>
+</div>
+</body>
+</html>
