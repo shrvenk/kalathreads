@@ -1,0 +1,131 @@
+{% extends 'mysite/base.html' %}
+{% load static %}
+{%load poll_extras%}
+{%block stl%}
+<style type="text/css">
+    .box1{
+        background-color:gray;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+    .boximg{
+        height : 300px;
+        margin-bottom: 20px;
+    }
+    .imag{
+        height: 100%;
+        width: 100%;
+    }
+    .inbox1{
+        background-color: black;
+        height: 300px;
+    }
+    .product_box{
+        padding: 0px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .product{
+        position: relative;
+        height: 420px;
+        background-color: violet;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background: repeat;
+    }
+    .innerproduct{
+        height: 420px;
+        background-color: #e9d6c9;
+        padding-top: 20px;
+        padding-right: 0px;
+        padding-left: 0px;
+        margin-bottom: 0px;
+        /* background: repeat; */
+    }
+    .innerproduct:hover{
+        background-color: white;
+    }
+    .product_img{
+        height: 350px;
+        background-color: red;
+        border-color: black;
+        padding-top: 0px;
+        padding-bottom: 10px;
+        background: repeat;
+    }
+    .image_product{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100%;
+        max-width: 100%;
+    }
+    .detail{
+        width: 80%;
+        /* background-color: gray; */
+        position:absolute;
+        transform: translate(-50%, -50%);
+        top: 93%;
+        left: 50%;
+        /* padding-top: 5px; */
+    }
+    .fade
+    {
+            opacity:1;
+    }
+    /* .fade:hover
+    {
+        box-shadow:
+                    1px 1px #121518,
+                    2px 2px #121518,
+                    1px 1px #121518;
+            -webkit-transform: translateX(-1px);
+            transform: translateX(-1px);
+    } */
+    .detail_product{
+        color: black;
+        /* font-weight: bold; */
+        margin-left: 10px;
+    }
+    .price_product{
+        color: rgb(121, 5, 5);
+        /* font-weight: bold; */
+        margin-left: 10px;
+        margin-bottom: 5px;
+    }
+    .bt{
+        margin-left: 0;
+    }
+    .yup{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+</style>
+{%endblock%}
+{% block home %}
+<div class="row">
+    <div class="col-md-10 col-md-push-1 product_box">
+        {% for product in products %}
+        <div class="col-md-3 product">
+        <div class="col innerproduct fade">
+            <div class="row">
+                <div class="col product_img">
+                    <a href="{%url 'frame'%}"><img class="image_product" src="{{product.img.url}}" alt="{{product.name}}"></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col detail">
+                    <span class="detail_product">{{product.name}}</span> <br> 
+                    <span class="price_product">&#8377;{{product.price}}</span>
+                </div>
+            </div>
+        </div>
+        </div>
+        {%endfor%}
+    </div>
+</div> 
+{%endblock%}
