@@ -6,4 +6,4 @@ def home(request):
     return render(request,'mysite/home.html',{})
 
 def cnt(request):
-    return render(request,'mysite/home.html',{})
+    return render(request,'mysite/contact.html',{})
