@@ -3,60 +3,95 @@
 {%load poll_extras%}
 {%block stl%}
 <style type="text/css">
-    
+.sccs{
+    font-size: 25px;
+    color: rgb(248, 245, 248);
+    background-color: rgb(44, 43, 43);
+    padding-left: 5px;
+}
+.bx{
+    border: 3px solid rgb(44, 43, 43);
+    border-radius: 3px;
+    padding-bottom: 10px;
+}
+.od{
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 5px;
+}
+.pad-l{
+    padding-left: 20px;
+}
+.ttl{
+    color: rgb(168, 51, 31);
+}
+.sr>.fa {
+  padding-top: 4px;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+.sr>.fa:hover {
+  opacity: 0.7;
+}
+.sr>.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.sr>.fa-instagram {
+  background: #125688;
+  color: white;
+}
+.sr>.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.lnk{
+    margin-left: 20px;
+}
+.bh{
+    background-color: white;
+}
+.gh{
+    margin-top: 50px;
+    margin-bottom: 250px;
+}
+@media (max-width: 641px)
+{
+    .gh{
+        width: 450px;
+        margin-left: 25px;
+    }
+}
+@media (min-width: 641px)
+{
+}
 </style>
 {%endblock%}
-{% block home %}
-<div class="container-fluid" id='sed'>
-    <pre class='dp dp1'>Wear the pants.</pre>
-    <pre class="dp dp2">Cool. Casual.</pre>
-    <pre class='dp dp3'>Our pants lineup will make you feel like a boss.</pre>
-    <button type="button" class="btn btn-light dp dp4">View</button>
-</div>
-<div class="row tst">
-    <div class="col box1">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
-            
-            <div class="carousel-inner">
-                <div class="item active">
-                <div class="row">
-                    <div class="col-md-12 inbox1">
-                        <img class="img-responsive imag" src="{% static 'images/img1.jpg'%}"alt="my image">
-                    </div>
-                </div>
-                </div>
-            
-                <div class="item">
-                <div class="row">
-                    <div class="col-md-12 inbox1">
-                        <img class="img-responsive imag" src="{% static 'images/img2.jpg'%}"alt="my image">
-                    </div>
-                </div>
-                </div>
-            
-                <div class="item">
-                <div class="row">
-                    <div class="col-md-12 inbox1">
-                        <img class="img-responsive imag" src="{% static 'images/img3.jpg'%}"alt="my image">
-                    </div>
-                </div>
-                </div>
+{%block home%}
+<div class="row gh">
+    <div class="col-md-8 col-md-push-2 bx bh">
+        <div class = 'row'>
+            <div class="col">
+                <p class="sccs">Contact Details :</p>
             </div>
-            
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-                <span class="sr-only">Next</span>
-            </a>
+        </div>
+        <div class="row dt">
+            <div class="col sr">
+                <p class='od'></p>
+                <p class="pad-l">Name : Venkatesh Ramchandra Kamtham</p>
+                <p class="pad-l">Email : venkatesh.rkamtham.cer17@itbhu.ac.in</p>
+                <p class="pad-l">Contact no : +91 7379055487</p>
+                <p class="pad-l">Address : IIT BHU Varanasi</p>
+                <span class="lnk">Follow me On :</span>
+                <a href="https://www.linkedin.com/in/venkatesh-kamtham-377140155/" class="fa fa-linkedin"></a>
+                <a href="https://www.instagram.com/shrvenk123/" class="fa fa-instagram"></a>
+                <a href="https://www.facebook.com/venkatesh.kamtham.3/" class="fa fa-facebook"></a>
             </div>
-    </div>
+        </div>
+    </div> 
 </div>
 {%endblock%}
