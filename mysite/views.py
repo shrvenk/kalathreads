@@ -5,5 +5,5 @@ from django.urls import reverse
 def contact(request):
     return render(request,'mysite/contact.html',{})
 
-# def home(request):
-#     return render(request,'mysite/home.html',{})
+def home(request):
+    return render(request,'mysite/home.html',{})
