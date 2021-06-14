@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import Images, ombre_detail
+from .models import Images, detail
 
 # Register your models here.
 
-admin.site.register(ombre_detail)
+admin.site.register(detail)
 admin.site.register(Images)

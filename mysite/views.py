@@ -1,5 +1,5 @@
 from django.shortcuts import render,get_object_or_404,redirect
-from .models import ombre_detail
+from .models import Images, detail
 from django.utils import timezone
 from django.shortcuts import redirect
 from django.views.generic import View
@@ -13,9 +13,11 @@ def contact(request):
 def home(request):
     return render(request,'mysite/home.html',{})
 
-def page(request):
-    products = ombre_detail.objects.all()
+def ombre(request):
+    products = detail.objects.filter(cat="ombre")
     return render(request,'mysite/page.html',{'products':products})
 
-def frame(request):
-    return render(request,'mysite/frame.html',{})
+def frame(request,idi):
+    det =get_object_or_404(detail,idi=idi)
+    pic = Images.objects.filter(idi=idi)
+    return render(request,'mysite/frame.html',{'product':det,'pic':pic})

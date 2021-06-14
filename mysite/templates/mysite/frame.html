@@ -2,19 +2,21 @@
 {% load static %}
 {%load poll_extras%}
 {%block stl%}
+<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
 <style type="text/css">
 .ht{
     margin-top: 40px;
 }
 .ig{
     /* background-color: tomato; */
-    height: 900px;
+    height: 700px;
 }
 .box{
-    width: 700px;        
+    width: 500px;        
     /* border: 5px solid black; */
     position: relative;
-    height: 850px;
+    height: 650px;
 }
 .img{
     max-width: 100%;
@@ -25,15 +27,35 @@
     left: 50%;
 }
 .inf{
-    background-color: turquoise;
-    height: 600px;
+    height: 700px;
 }
 .slide{
     position: absolute;
     transform: translate(-50%, 0);
     left: 50%;
-    width: 700px;
+    width: 500px;
     /* height: 600px; */
+}
+.title{
+    font-family: 'Quicksand';
+}
+.tt{
+    font-weight: 600;
+}
+hr{
+    color: black;
+}
+.det{
+    color: black;
+}
+.pt{
+    color: rgb(109, 109, 109);
+    margin-left: 35px;
+    line-height: 2;
+}
+.des{
+    color: rgb(109, 109, 109);
+    line-height: 1.4;
 }
 </style>
 {%endblock%}
@@ -46,20 +68,19 @@
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
                 <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
                 </ol>
             
                 <div class="carousel-inner">
                 <div class="item active box">
-                    <img src="{% static 'images/1.jpg'%}" alt="Los Angeles" style="width:100%;">
-                </div>
-            
-                <div class="item box">
-                    <img src="{% static 'images/2.jpg'%}" alt="Chicago" style="width:100%;">
+                    <img src="{{product.img.url}}" alt="Los Angeles" style="width:100%;">
                 </div>
                 
+                {% for each in pic %}
                 <div class="item box">
-                    <img src="{% static 'images/3.jpg'%}" alt="New york" style="width:100%;">
+                    <img src="{{each.img.url}}" alt="Chicago" style="width:100%;">
                 </div>
+                {%endfor%}
                 </div>
             
                 <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -73,7 +94,14 @@
             </div>        
         </div>
         <div class='col-md-4 col-md-push-1 inf'>
-    </div>
+            <h3 class='title tt'>{{product.name}}<br></h3>
+            <h4 class='title'>&#8377; {{product.price}}<br></h4>
+            <hr style="height:2px;border-width:0;color:white;background-color:white">
+            <h5 class="det">DETAILS :<br></h5>
+            <h5 class="pt">{{product.details|linebreaks}}</h5>
+            <h5 class="det">DESCRIPTION :<br></h5>
+            <h5 class="des">Our favorite jean meets our favorite decade. Made from premium non-stretch<br>Japanese denim for a vintage-inspired look, the ’90s Cheeky Jean<br> has an easy straight leg, an extra-high rise, and a butt-boosting rear fit.</h5>
+        </div>
     </div>
 </div>
 {%endblock%}
