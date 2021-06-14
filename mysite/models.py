@@ -9,6 +9,7 @@ class detail(models.Model):
     idi = models.CharField(max_length=100,default='nill')
     img = models.ImageField(null=True)
     details = models.TextField(max_length=10000,null=True)
+    description = models.TextField(max_length=10000,null=True)
     price = models.IntegerField()
 
 class Images(models.Model):
