@@ -5,18 +5,49 @@
 <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
 <style type="text/css">
+@media (max-width: 641px)
+{
+    .box{
+        width: 300px;
+        height: 450px;
+    }
+    .ig{
+        height: 500px;
+    }
+    .slide{
+        width: 300px;
+    }
+    .inf{
+        height: 500px;
+    }
+}
+@media (min-width: 641px)
+{
+    .box{
+        width: 500px;
+        height: 650px;
+    }
+    .ig{
+        height: 700px;
+    }
+    .slide{
+        width: 500px;
+    }
+    .inf{
+        height: 700px;
+    }
+}
 .ht{
     margin-top: 40px;
 }
-.ig{
-    /* background-color: tomato; */
+/* .ig{
     height: 700px;
-}
+} */
 .box{
-    width: 500px;        
+    /* width: 500px;         */
     /* border: 5px solid black; */
     position: relative;
-    height: 650px;
+    /* height: 650px; */
 }
 .img{
     max-width: 100%;
@@ -26,14 +57,11 @@
     top: 50%;
     left: 50%;
 }
-.inf{
-    height: 700px;
-}
 .slide{
     position: absolute;
     transform: translate(-50%, 0);
     left: 50%;
-    width: 500px;
+    /* width: 500px; */
     /* height: 600px; */
 }
 .title{
