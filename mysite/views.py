@@ -17,6 +17,34 @@ def ombre(request):
     products = detail.objects.filter(cat="ombre")
     return render(request,'mysite/page.html',{'products':products})
 
+def plain(request):
+    products = detail.objects.filter(cat="plain")
+    return render(request,'mysite/page.html',{'products':products})
+
+def halfandhalf(request):
+    products = detail.objects.filter(cat="lfandhalf")
+    return render(request,'mysite/page.html',{'products':products})
+
+def shibori(request):
+    products = detail.objects.filter(cat="shibori")
+    return render(request,'mysite/page.html',{'products':products})
+
+def bandhani(request):
+    products = detail.objects.filter(cat="bandhani")
+    return render(request,'mysite/page.html',{'products':products})
+
+def dupatta(request):
+    products = detail.objects.filter(cat="dupatta")
+    return render(request,'mysite/page.html',{'products':products})
+
+def kurti(request):
+    products = detail.objects.filter(cat="kurti")
+    return render(request,'mysite/page.html',{'products':products})
+
+def others(request):
+    products = detail.objects.filter(cat="others")
+    return render(request,'mysite/page.html',{'products':products})
+
 def frame(request,idi):
     det =get_object_or_404(detail,idi=idi)
     pic = Images.objects.filter(idi=idi)
